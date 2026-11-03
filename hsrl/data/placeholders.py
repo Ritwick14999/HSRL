@@ -1,9 +1,9 @@
-"""Adapters still to be written. Each must return a SplitData (see base.py) with the same interface:
+"""Adapters for datasets other than Gleason. Each returns a SplitData (see base.py) with the same interface:
 labelled (patch_id, path, label, q, optional reader votes), unlabelled / val / test (patch_id, path).
 
 MHIST: annotations.csv gives majority label + number of SSA votes (7 readers). There is no reader linkage,
        so reader columns are NA and only counts_only is meaningful.
-PCam:  a single label per image. q = label, no votes.
+PCam:  a single label per image. q = label, no votes. Not implemented.
 """
 from .registry import register
 

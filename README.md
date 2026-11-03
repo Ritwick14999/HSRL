@@ -52,6 +52,9 @@ Each run writes `results/<run_name>/`:
 - `pseudo_labels_round*.csv`, `preds_<stage>_<split>.csv`, `embeddings_<stage>_test.npy`
 - `model_*.pt`
 
+Per-run folders are not in the repository (only on the training machine). Every run's test metrics are listed in
+the matching summary folder (`results/*_summary/all_test_metrics.csv` or `per_run.csv`).
+
 Code layout: `hsrl/data/` (pluggable datasets, vote modes), `hsrl/models.py` (f, g, h), `hsrl/losses.py`
 (structural losses), `hsrl/mining.py` (tuple mining), `hsrl/samplers.py`, `hsrl/stages.py` (Stages I–III,
 supervised baseline), `hsrl/evaluate.py`, `hsrl/train.py`.
@@ -80,8 +83,7 @@ Outputs:
   (`analysis/class_shift.py`), `results/excl_r1_summary/report.md`
 - Exploratory pilot (interval losses on frozen ImageNet features):
   `.venv/Scripts/python -I hsrl/pilot_frozen.py --config configs/pilot_frozen.yaml`, plus `configs/pilot_frozen_robust.yaml`
-  for the robustness checks; `bash scripts/run_overnight.sh` runs the pilot, robustness, Map4 swap and 1024 px batches.
-  Outputs go to `results/pilot_frozen*/`, `results/reader_swap_summary/` and `results/p1024_summary/`.
+  for the robustness checks. Outputs go to `results/pilot_frozen*/`, `results/reader_swap_summary/` and `results/p1024_summary/`.
 - MHIST (Batches 6–9): `data/mhist_prepare.py` builds the label sets; runs in `results/mhist*/`, summaries in
   `results/mhist*_summary/`.
 - Extension plan step 1 (no training): `.venv/Scripts/python -I analysis/joint_check.py` → `results/joint_check/summary.md`

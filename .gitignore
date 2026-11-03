@@ -27,3 +27,30 @@ data/mhist/
 # local working notes
 CLAUDE.md
 TASK.md
+# per-run folders (config, metrics, step logs); every run's numbers are in the matching *_summary/ folder
+results/main/
+results/deviations/
+results/soft/
+results/p1024/
+results/excl_r1/
+results/excl_r4/
+results/gleason_ext/
+results/gleason_margin/
+results/mhist/
+results/mhist_d10/
+results/mhist_ext/
+results/mhist_margin/
+results/mhist_protocol/
+results/mhist_randsplit/
+results/mhist_rerun/
+results/smoke_*/
+results/joint_check/gleason/
+results/joint_check/mhist/
+# early checks superseded by the summaries, smoke tests, queue state
+results/phase3_fold0/
+results/audit/
+results/pilot_frozen_mhist_smoke/
+results/queue_status.csv
+# one-off batch launchers (scripts/run_queue.py runs everything)
+scripts/run_fold0.sh
+scripts/run_overnight.sh
