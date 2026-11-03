@@ -1,0 +1,6 @@
+run,pre_acc,pre_bal_acc,pre_split_vote_acc,pre_unanimous_acc,post_acc,post_bal_acc,post_split_vote_acc,post_unanimous_acc
+f0s0_hsrl_soft,0.7799,0.7893,0.7141,0.9133,0.7789,0.792,0.7049,0.9288
+f1s1_hsrl_soft,0.7912,0.7658,0.7446,0.8854,0.8025,0.8025,0.7446,0.9195
+f2s2_hsrl_soft,0.7656,0.7415,0.7263,0.8452,0.7564,0.7574,0.708,0.8545
+f3s3_hsrl_soft,0.7288,0.7135,0.6667,0.8545,0.7267,0.731,0.6621,0.8576
+f4s4_hsrl_soft,0.7697,0.7332,0.7309,0.8483,0.7861,0.7745,0.7431,0.8731

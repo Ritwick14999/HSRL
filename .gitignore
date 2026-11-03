@@ -1,0 +1,29 @@
+.venv/
+__pycache__/
+*.pyc
+# raw data (prep scripts in data/ are tracked)
+data/gleason/
+data/processed/
+data/gleason2019/
+data/**/*.zip
+data/**/*.jpg
+data/**/*.png
+# large run artefacts
+results/**/*.pt
+results/**/*.pth
+# private documents (paper under review, supervisor's plan and slides)
+docs/
+# large per-run artefacts (regenerable; available on request)
+results/**/tuples_stage1.csv
+results/**/embeddings_*.npy
+results/**/preds_*.csv
+results/**/pseudo_labels_round*.csv
+results/**/test_predictions.csv
+results/**/census/pseudo_label_neighbourhood.csv
+results/logs/
+results/checks/
+# MHIST raw data (not ours to redistribute)
+data/mhist/
+# local working notes
+CLAUDE.md
+TASK.md

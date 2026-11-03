@@ -1,0 +1,13 @@
+set,term,hinge,n,n_evaluable,pct_violated,pct_supported
+B_mined_epoch0,1,active,512,405,1.9753086419753085,95.06172839506173
+B_mined_epoch0,1,inactive,0,0,,
+B_mined_epoch0,2,active,511,394,25.888324873096447,33.50253807106599
+B_mined_epoch0,2,inactive,1,1,0.0,0.0
+B_mined_epoch0,3,active,512,402,2.2388059701492535,95.02487562189054
+B_mined_epoch0,3,inactive,0,0,,
+B_mined_epoch29,1,active,512,377,1.5915119363395225,96.55172413793103
+B_mined_epoch29,1,inactive,0,0,,
+B_mined_epoch29,2,active,512,363,27.823691460055095,36.08815426997245
+B_mined_epoch29,2,inactive,0,0,,
+B_mined_epoch29,3,active,512,396,1.5151515151515151,96.46464646464646
+B_mined_epoch29,3,inactive,0,0,,

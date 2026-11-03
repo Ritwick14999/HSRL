@@ -1,0 +1,49 @@
+# EXPLORATORY PILOT (not the HSRL reproduction): interval losses on frozen ImageNet EfficientNet-B2 features.
+# All hyperparameters are fixed in advance; nothing is tuned on validation or test.
+results_dir: results/pilot_frozen
+features_path: data/processed/gleason/p512/features_effb2_imagenet.npz
+seed_base: 20261025
+folds: [0, 1, 2]
+seeds: [0, 1, 2, 3, 4]
+min_shared: 3                 # linked agreement used only with >= 3 shared readers (else counts-only bounds)
+retrieval_pairs: 20000        # test pairs for the secondary reader-agreement retrieval measure
+
+data:                         # same label set and folds as the main grid; labelled patches only for training
+  dataset: gleason
+  processed_root: data/processed/gleason
+  tile_size: 512
+  benign_rule: drop
+  exclude_readers: []
+  fold: 0
+  vote_mode: linked           # labelled votes are loaded linked; permuted / counts_only are derived per method
+  include_ties: false
+  unlabelled_pool: filtered
+  num_workers: 4
+
+augment: {hflip: 0.5, vflip: 0.5, rotation: rot90, rotation_p: 0.5, color_jitter: null}   # unused: features have no augmentation
+
+methods: [probe_hard, probe_soft, hsrl_t13, annotator_aware,
+          interval_linked, interval_permuted, interval_counts_only,
+          worstcase_linked, worstcase_permuted, worstcase_counts_only]
+
+head:                         # small projection head on cached features (all head methods)
+  hidden: 512
+  dim: 128
+  tuples_per_anchor: 20       # fixed tuples, sampled once per (fold, seed), identical for every loss
+  batch_tuples: 256
+  epochs: 50
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+  alpha: 1.0                  # HSRL margins for the terms 1 + 3 baseline
+  gamma: 0.5
+
+probe:                        # linear probe (baselines, and hard/soft probes on head embeddings)
+  steps: 500
+  lr: 1.0e-2
+  weight_decay: 1.0e-4
+
+annotator:                    # annotator-aware classifier: shared hidden layer + one head per reader
+  hidden: 128
+  steps: 1000
+  lr: 1.0e-3
+  weight_decay: 1.0e-4

@@ -1,0 +1,73 @@
+results_dir: results/pilot_frozen_robust
+features_path: data/processed/gleason/p512/features_effb2_imagenet.npz
+seed_base: 20261025
+folds:
+- 0
+- 1
+- 2
+seeds:
+- 0
+- 1
+- 2
+- 3
+- 4
+min_shared: 3
+retrieval_pairs: 20000
+data:
+  dataset: gleason
+  processed_root: data/processed/gleason
+  tile_size: 512
+  benign_rule: drop
+  exclude_readers: []
+  fold: 0
+  vote_mode: linked
+  include_ties: false
+  unlabelled_pool: filtered
+  num_workers: 4
+augment:
+  hflip: 0.5
+  vflip: 0.5
+  rotation: rot90
+  rotation_p: 0.5
+  color_jitter: null
+methods:
+- interval_linked
+- interval_linked_renamed
+- worstcase_linked
+- worstcase_linked_renamed
+- interval_permuted_p0
+- interval_permuted_p1
+- interval_permuted_p2
+- interval_permuted_p3
+- interval_permuted_p4
+- worstcase_permuted_p0
+- worstcase_permuted_p1
+- worstcase_permuted_p2
+- worstcase_permuted_p3
+- worstcase_permuted_p4
+head:
+  hidden: 512
+  dim: 128
+  tuples_per_anchor: 20
+  batch_tuples: 256
+  epochs: 50
+  lr: 0.001
+  weight_decay: 0.0001
+  alpha: 1.0
+  gamma: 0.5
+probe:
+  steps: 500
+  lr: 0.01
+  weight_decay: 0.0001
+annotator:
+  hidden: 128
+  steps: 1000
+  lr: 0.001
+  weight_decay: 0.0001
+report: robustness
+permutation_draws:
+- 0
+- 1
+- 2
+- 3
+- 4

@@ -1,0 +1,6 @@
+fold,seed,method,n_labelled,n_tuples,overall_acc,overall_bal_acc,overall_brier,overall_auroc,unanimous_acc,unanimous_bal_acc,unanimous_brier,unanimous_auroc,split_vote_acc,split_vote_bal_acc,split_vote_brier,split_vote_auroc,loss_first,loss_last,softprobe_bal_acc,softprobe_brier,softprobe_split_acc,exact_pair_frac
+0,0,probe_hard,218,4360,0.6673,0.7002,0.3013,0.785,0.7647,0.7803,0.2048,0.8766,0.6193,0.6603,0.349,0.7305,,,,,,
+0,0,probe_soft,218,4360,0.6469,0.666,0.2803,0.7344,0.7368,0.7465,0.2099,0.8065,0.6024,0.6248,0.315,0.6963,,,,,,
+0,0,hsrl_t13,218,4360,0.695,0.6619,0.2769,0.7547,0.7678,0.7436,0.2103,0.8586,0.659,0.6223,0.3098,0.7005,0.2664531583359482,0.0,0.71,0.1911,0.6697,
+0,0,interval_counts_only,218,4360,0.7277,0.726,0.2445,0.8081,0.8111,0.8053,0.1627,0.9009,0.6865,0.6875,0.2849,0.7562,0.022953212982334128,1.6247283138250376e-05,0.713,0.2039,0.6713,0.0
+0,0,worstcase_counts_only,218,4360,0.7441,0.7453,0.2353,0.8154,0.8359,0.8354,0.1543,0.8921,0.6988,0.699,0.2752,0.7701,0.21823569938130336,0.18303422758338647,0.7493,0.1861,0.6911,0.0

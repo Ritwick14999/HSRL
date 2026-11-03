@@ -1,0 +1,13 @@
+set,term,hinge,n,n_evaluable,pct_violated,pct_supported
+B_mined_epoch0,1,active,224,0,,
+B_mined_epoch0,1,inactive,0,0,,
+B_mined_epoch0,2,active,223,0,,
+B_mined_epoch0,2,inactive,1,0,,
+B_mined_epoch0,3,active,224,0,,
+B_mined_epoch0,3,inactive,0,0,,
+B_mined_epoch29,1,active,33,0,,
+B_mined_epoch29,1,inactive,191,0,,
+B_mined_epoch29,2,active,84,0,,
+B_mined_epoch29,2,inactive,140,0,,
+B_mined_epoch29,3,active,5,0,,
+B_mined_epoch29,3,inactive,219,0,,

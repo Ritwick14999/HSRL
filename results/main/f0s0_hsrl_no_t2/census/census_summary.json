@@ -1,0 +1,289 @@
+{
+  "run": "results\\f0s0_hsrl_no_t2",
+  "n_labelled": 488,
+  "min_shared": 3,
+  "B_epochs": [
+    0,
+    29
+  ],
+  "pair_info": {
+    "A_random": {
+      "ap": {
+        "mean_shared": 3.41001,
+        "n_pairs_lt3_shared": 11397,
+        "n_pairs": 100000
+      },
+      "an": {
+        "mean_shared": 3.36042,
+        "n_pairs_lt3_shared": 11845,
+        "n_pairs": 100000
+      },
+      "nc": {
+        "mean_shared": 3.33612,
+        "n_pairs_lt3_shared": 12680,
+        "n_pairs": 100000
+      },
+      "ac": {
+        "mean_shared": 3.3555,
+        "n_pairs_lt3_shared": 11998,
+        "n_pairs": 100000
+      }
+    },
+    "B_mined_epoch0": {
+      "ap": {
+        "mean_shared": 3.314453125,
+        "n_pairs_lt3_shared": 65,
+        "n_pairs": 512
+      },
+      "an": {
+        "mean_shared": 3.357421875,
+        "n_pairs_lt3_shared": 66,
+        "n_pairs": 512
+      },
+      "nc": {
+        "mean_shared": 3.330078125,
+        "n_pairs_lt3_shared": 62,
+        "n_pairs": 512
+      },
+      "ac": {
+        "mean_shared": 3.333984375,
+        "n_pairs_lt3_shared": 60,
+        "n_pairs": 512
+      }
+    },
+    "B_mined_epoch29": {
+      "ap": {
+        "mean_shared": 3.380859375,
+        "n_pairs_lt3_shared": 65,
+        "n_pairs": 512
+      },
+      "an": {
+        "mean_shared": 3.375,
+        "n_pairs_lt3_shared": 62,
+        "n_pairs": 512
+      },
+      "nc": {
+        "mean_shared": 3.591796875,
+        "n_pairs_lt3_shared": 16,
+        "n_pairs": 512
+      },
+      "ac": {
+        "mean_shared": 3.517578125,
+        "n_pairs_lt3_shared": 39,
+        "n_pairs": 512
+      }
+    }
+  },
+  "crosstabs": {
+    "A_random": {
+      "1": {
+        "skipped": {
+          "certified": 18525,
+          "undecided": 717
+        },
+        "supported": {
+          "certified": 76137,
+          "undecided": 1416
+        },
+        "tie": {
+          "certified": 1764,
+          "undecided": 298
+        },
+        "violated": {
+          "certified": 486,
+          "undecided": 657
+        }
+      },
+      "2": {
+        "skipped": {
+          "certified": 7716,
+          "contradicted": 6256,
+          "undecided": 8751
+        },
+        "supported": {
+          "certified": 23155,
+          "contradicted": 322,
+          "undecided": 3427
+        },
+        "tie": {
+          "certified": 4430,
+          "contradicted": 3355,
+          "undecided": 21022
+        },
+        "violated": {
+          "certified": 217,
+          "contradicted": 17681,
+          "undecided": 3668
+        }
+      },
+      "3": {
+        "skipped": {
+          "certified": 18610,
+          "undecided": 771
+        },
+        "supported": {
+          "certified": 76018,
+          "undecided": 1409
+        },
+        "tie": {
+          "certified": 1735,
+          "undecided": 290
+        },
+        "violated": {
+          "certified": 495,
+          "undecided": 672
+        }
+      }
+    },
+    "B_mined_epoch0": {
+      "1": {
+        "skipped": {
+          "certified": 102,
+          "undecided": 5
+        },
+        "supported": {
+          "certified": 383,
+          "undecided": 3
+        },
+        "tie": {
+          "certified": 10,
+          "undecided": 0
+        },
+        "violated": {
+          "certified": 6,
+          "undecided": 3
+        }
+      },
+      "2": {
+        "skipped": {
+          "certified": 35,
+          "contradicted": 35,
+          "undecided": 50
+        },
+        "supported": {
+          "certified": 110,
+          "contradicted": 4,
+          "undecided": 20
+        },
+        "tie": {
+          "certified": 27,
+          "contradicted": 18,
+          "undecided": 92
+        },
+        "violated": {
+          "certified": 3,
+          "contradicted": 103,
+          "undecided": 15
+        }
+      },
+      "3": {
+        "skipped": {
+          "certified": 96,
+          "undecided": 5
+        },
+        "supported": {
+          "certified": 388,
+          "undecided": 4
+        },
+        "tie": {
+          "certified": 11,
+          "undecided": 2
+        },
+        "violated": {
+          "certified": 3,
+          "undecided": 3
+        }
+      }
+    },
+    "B_mined_epoch29": {
+      "1": {
+        "skipped": {
+          "certified": 99,
+          "undecided": 6
+        },
+        "supported": {
+          "certified": 381,
+          "undecided": 11
+        },
+        "tie": {
+          "certified": 8,
+          "undecided": 3
+        },
+        "violated": {
+          "certified": 2,
+          "undecided": 2
+        }
+      },
+      "2": {
+        "skipped": {
+          "certified": 14,
+          "contradicted": 25,
+          "undecided": 42
+        },
+        "supported": {
+          "certified": 121,
+          "contradicted": 0,
+          "undecided": 26
+        },
+        "tie": {
+          "certified": 40,
+          "contradicted": 22,
+          "undecided": 109
+        },
+        "violated": {
+          "certified": 1,
+          "contradicted": 86,
+          "undecided": 26
+        }
+      },
+      "3": {
+        "skipped": {
+          "certified": 78,
+          "undecided": 7
+        },
+        "supported": {
+          "certified": 395,
+          "undecided": 12
+        },
+        "tie": {
+          "certified": 11,
+          "undecided": 3
+        },
+        "violated": {
+          "certified": 1,
+          "undecided": 5
+        }
+      }
+    }
+  },
+  "pseudo_label_concentration": {
+    "n_accepted_nontie": 3497,
+    "n_wrong_confident": 368,
+    "nbr_viol_rate": {
+      "mean_wrong": 0.08024345000611152,
+      "mean_correct": 0.07258723022318331,
+      "auroc_predicting_wrong": 0.6031627343087805,
+      "perm_p": 0.0
+    },
+    "nbr_undecided_rate": {
+      "mean_wrong": 0.14958228750627728,
+      "mean_correct": 0.14018547569888135,
+      "auroc_predicting_wrong": 0.6340371281281698,
+      "perm_p": 0.0
+    },
+    "nbr_label_disagree": {
+      "mean_wrong": 0.0005434782608695652,
+      "mean_correct": 0.0006391818472355385,
+      "auroc_predicting_wrong": 0.5002392589659149,
+      "perm_p": 1.0
+    },
+    "core_level": {
+      "n_cores": 114,
+      "spearman_err_vs_viol_rate": 0.33229278863543416,
+      "spearman_err_vs_undecided_rate": 0.39889469959316615
+    },
+    "error_rate_unanimous": 0.0549618320610687,
+    "error_rate_split_vote": 0.2554161915621437
+  },
+  "caveat": "counts-only bounds assume a common reader panel; Gleason readers vary per core and per patch"
+}

@@ -1,0 +1,274 @@
+{
+  "run_dir": "results\\mhist_randsplit\\f1s1_hsrl_no_stage1",
+  "dataset": "mhist/labels_p10rs/draw1",
+  "data": {
+    "labelled": 218,
+    "labelled_per_class": {
+      "0": 149,
+      "1": 69
+    },
+    "unlabelled": 1739,
+    "val": 218,
+    "test": 977
+  },
+  "params": {
+    "f": 7700994,
+    "g": 2164224,
+    "h": 2818,
+    "f+h (inference)": 7703812,
+    "total (training)": 9868036
+  },
+  "env": {
+    "torch": "2.14.0+cu130",
+    "cuda": "13.0",
+    "timm": "1.0.30",
+    "gpu": "NVIDIA GeForce RTX 5050 Laptop GPU",
+    "max_gpu_mem_gb": 2.38
+  },
+  "stage2": [
+    {
+      "epoch": 0,
+      "loss": 0.6192531968866076,
+      "train_acc": 0.6559633027522935,
+      "sec": 14.714204788208008
+    },
+    {
+      "epoch": 1,
+      "loss": 0.4880159965583256,
+      "train_acc": 0.7522935779816514,
+      "sec": 0.571136474609375
+    },
+    {
+      "epoch": 2,
+      "loss": 0.4621411859989166,
+      "train_acc": 0.7660550458715596,
+      "sec": 0.6136436462402344
+    },
+    {
+      "epoch": 3,
+      "loss": 0.43897560238838196,
+      "train_acc": 0.7981651376146789,
+      "sec": 0.5872552394866943
+    },
+    {
+      "epoch": 4,
+      "loss": 0.39966400606291635,
+      "train_acc": 0.8394495412844036,
+      "sec": 0.5447518825531006
+    }
+  ],
+  "eval_stage2": {
+    "val": {
+      "overall": {
+        "n": 218,
+        "acc": 0.7982,
+        "bal_acc": 0.7569,
+        "macro_f1": 0.761,
+        "brier": 0.1398,
+        "macro_precision": 0.7658,
+        "auroc": 0.8594
+      },
+      "unanimous": {
+        "n": 82,
+        "acc": 0.8659,
+        "bal_acc": 0.8405,
+        "macro_f1": 0.836,
+        "brier": 0.1023,
+        "macro_precision": 0.8319,
+        "auroc": 0.916
+      },
+      "split_vote": {
+        "n": 136,
+        "acc": 0.7574,
+        "bal_acc": 0.712,
+        "macro_f1": 0.7176,
+        "brier": 0.1624,
+        "macro_precision": 0.726,
+        "auroc": 0.8134
+      }
+    },
+    "test": {
+      "overall": {
+        "n": 977,
+        "acc": 0.781,
+        "bal_acc": 0.7256,
+        "macro_f1": 0.7344,
+        "brier": 0.1499,
+        "macro_precision": 0.7483,
+        "auroc": 0.8357
+      },
+      "unanimous": {
+        "n": 328,
+        "acc": 0.8232,
+        "bal_acc": 0.7965,
+        "macro_f1": 0.7979,
+        "brier": 0.1299,
+        "macro_precision": 0.7994,
+        "auroc": 0.8881
+      },
+      "split_vote": {
+        "n": 649,
+        "acc": 0.7596,
+        "bal_acc": 0.6876,
+        "macro_f1": 0.6981,
+        "brier": 0.1601,
+        "macro_precision": 0.7191,
+        "auroc": 0.8027
+      }
+    }
+  },
+  "stage3": [
+    {
+      "epoch": 0,
+      "loss": 0.6694991522365146,
+      "n_pseudo": 620,
+      "pseudo_coverage": 0.35652673950546293,
+      "sec": 17.4737069606781
+    },
+    {
+      "epoch": 1,
+      "loss": 0.5806029858412566,
+      "n_pseudo": 620,
+      "pseudo_coverage": 0.35652673950546293,
+      "sec": 3.371596097946167
+    },
+    {
+      "epoch": 2,
+      "loss": 0.49229588000862684,
+      "n_pseudo": 620,
+      "pseudo_coverage": 0.35652673950546293,
+      "sec": 3.4371426105499268
+    },
+    {
+      "epoch": 3,
+      "loss": 0.4292742808659871,
+      "n_pseudo": 620,
+      "pseudo_coverage": 0.35652673950546293,
+      "sec": 3.3933706283569336
+    },
+    {
+      "epoch": 4,
+      "loss": 0.3829207056098514,
+      "n_pseudo": 620,
+      "pseudo_coverage": 0.35652673950546293,
+      "sec": 3.400588035583496
+    },
+    {
+      "epoch": 5,
+      "loss": 0.3423484530713823,
+      "n_pseudo": 620,
+      "pseudo_coverage": 0.35652673950546293,
+      "sec": 3.3570289611816406
+    },
+    {
+      "epoch": 6,
+      "loss": 0.30431905057695174,
+      "n_pseudo": 620,
+      "pseudo_coverage": 0.35652673950546293,
+      "sec": 3.4306728839874268
+    },
+    {
+      "epoch": 7,
+      "loss": 0.2831377304262585,
+      "n_pseudo": 620,
+      "pseudo_coverage": 0.35652673950546293,
+      "sec": 3.4150848388671875
+    },
+    {
+      "epoch": 8,
+      "loss": 0.24809534185462528,
+      "n_pseudo": 620,
+      "pseudo_coverage": 0.35652673950546293,
+      "sec": 3.367452383041382
+    },
+    {
+      "epoch": 9,
+      "loss": 0.22695527253327547,
+      "n_pseudo": 620,
+      "pseudo_coverage": 0.35652673950546293,
+      "sec": 3.4144370555877686
+    }
+  ],
+  "eval_stage3": {
+    "val": {
+      "overall": {
+        "n": 218,
+        "acc": 0.8211,
+        "bal_acc": 0.7816,
+        "macro_f1": 0.7872,
+        "brier": 0.1243,
+        "macro_precision": 0.7941,
+        "auroc": 0.8936
+      },
+      "unanimous": {
+        "n": 82,
+        "acc": 0.9024,
+        "bal_acc": 0.8659,
+        "macro_f1": 0.8758,
+        "brier": 0.0808,
+        "macro_precision": 0.8876,
+        "auroc": 0.9602
+      },
+      "split_vote": {
+        "n": 136,
+        "acc": 0.7721,
+        "bal_acc": 0.7342,
+        "macro_f1": 0.7381,
+        "brier": 0.1505,
+        "macro_precision": 0.7429,
+        "auroc": 0.8457
+      }
+    },
+    "test": {
+      "overall": {
+        "n": 977,
+        "acc": 0.741,
+        "bal_acc": 0.6938,
+        "macro_f1": 0.696,
+        "brier": 0.1623,
+        "macro_precision": 0.6986,
+        "auroc": 0.8156
+      },
+      "unanimous": {
+        "n": 328,
+        "acc": 0.8293,
+        "bal_acc": 0.8082,
+        "macro_f1": 0.8067,
+        "brier": 0.1177,
+        "macro_precision": 0.8053,
+        "auroc": 0.9145
+      },
+      "split_vote": {
+        "n": 649,
+        "acc": 0.6965,
+        "bal_acc": 0.6337,
+        "macro_f1": 0.6363,
+        "brier": 0.1848,
+        "macro_precision": 0.6398,
+        "auroc": 0.7558
+      }
+    }
+  },
+  "pseudo_label_diagnostics": {
+    "pseudo_labels_round0": {
+      "tau": 0.85,
+      "pool": 1739,
+      "accepted": 620,
+      "coverage": 0.3565,
+      "overall": {
+        "n": 620,
+        "precision": 0.9242
+      },
+      "unanimous": {
+        "n": 240,
+        "precision": 0.9667
+      },
+      "split_vote": {
+        "n": 380,
+        "precision": 0.8974
+      },
+      "tie_accepted": 0
+    }
+  },
+  "wall_time_sec": 125.6
+}

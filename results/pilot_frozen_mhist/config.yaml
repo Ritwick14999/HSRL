@@ -1,0 +1,57 @@
+results_dir: results/pilot_frozen_mhist
+features_path: data/processed/mhist/features_effb2_imagenet.npz
+seed_base: 20261031
+folds:
+- 0
+- 1
+- 2
+- 3
+- 4
+seeds:
+- 0
+- 1
+- 2
+min_shared: 3
+retrieval_pairs: 20000
+criterion:
+  pairs: 12
+  folds: 4
+data:
+  dataset: mhist
+  processed_root: data/processed/mhist
+  image_root: data/mhist
+  labelled_pct: 10
+  tile_size: 224
+  benign_rule: drop
+  exclude_readers: []
+  fold: 0
+  vote_mode: counts_only
+  include_ties: false
+  unlabelled_pool: filtered
+  num_workers: 4
+augment:
+  hflip: 0.5
+  vflip: 0.5
+  rotation: rot90
+  rotation_p: 0.5
+  color_jitter: null
+methods:
+- probe_hard
+- probe_soft
+- hsrl_t13
+- interval_counts_only
+- worstcase_counts_only
+head:
+  hidden: 512
+  dim: 128
+  tuples_per_anchor: 20
+  batch_tuples: 256
+  epochs: 50
+  lr: 0.001
+  weight_decay: 0.0001
+  alpha: 1.0
+  gamma: 0.5
+probe:
+  steps: 500
+  lr: 0.01
+  weight_decay: 0.0001

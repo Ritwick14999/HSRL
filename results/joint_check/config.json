@@ -1,0 +1,33 @@
+{
+  "runs": [
+    "results\\main\\f0s0_hsrl",
+    "results\\main\\f0s1_hsrl",
+    "results\\main\\f0s2_hsrl",
+    "results\\main\\f0s3_hsrl",
+    "results\\main\\f0s4_hsrl",
+    "results\\main\\f1s0_hsrl",
+    "results\\main\\f1s1_hsrl",
+    "results\\main\\f1s2_hsrl",
+    "results\\main\\f1s3_hsrl",
+    "results\\main\\f1s4_hsrl",
+    "results\\main\\f2s0_hsrl",
+    "results\\main\\f2s1_hsrl",
+    "results\\main\\f2s2_hsrl",
+    "results\\main\\f2s3_hsrl",
+    "results\\main\\f2s4_hsrl",
+    "results\\mhist\\f0s0_hsrl",
+    "results\\mhist\\f1s1_hsrl",
+    "results\\mhist\\f2s2_hsrl",
+    "results\\mhist\\f3s3_hsrl",
+    "results\\mhist\\f4s4_hsrl"
+  ],
+  "out": "results/joint_check",
+  "n_random": 1000,
+  "n_scope": 200,
+  "tol": 1e-06,
+  "seed": 20261101,
+  "criterion": {
+    "pct_gap": 10.0,
+    "rel_gap": 0.05
+  }
+}

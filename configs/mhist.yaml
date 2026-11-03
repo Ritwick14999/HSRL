@@ -1,0 +1,10 @@
+# HSRL on MHIST (paper protocol: 10% labelled, 224x224 input). Everything not overridden comes from the Gleason
+# config, which follows the paper. "fold" = labelled draw k on the official split (data/mhist_prepare.py).
+base: configs/hsrl_gleason.yaml
+data:
+  dataset: mhist
+  processed_root: data/processed/mhist
+  image_root: data/mhist
+  labelled_pct: 10            # 10 = paper's labelled fraction; 100 = fully supervised reference
+  vote_mode: counts_only      # MHIST releases vote counts only
+  fold: 0

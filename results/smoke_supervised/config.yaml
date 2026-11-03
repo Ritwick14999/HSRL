@@ -1,0 +1,79 @@
+run_name: smoke_supervised
+results_root: results
+overwrite: true
+seed: 0
+device: cuda
+amp: bf16
+method: supervised
+data:
+  dataset: gleason
+  processed_root: data/processed/gleason
+  tile_size: 512
+  benign_rule: drop
+  exclude_readers: []
+  fold: 0
+  vote_mode: linked
+  vote_seed: 0
+  include_ties: false
+  unlabelled_pool: filtered
+  subset:
+    labelled_per_class: 64
+    unlabelled: 256
+    val: 64
+    test: 128
+  num_workers: 4
+model:
+  backbone: efficientnet_b2
+  pretrained: true
+  proj_hidden: null
+  proj_dim: 128
+augment:
+  hflip: 0.5
+  vflip: 0.5
+  rotation: rot180
+  rotation_p: 0.5
+  color_jitter:
+    brightness: 0.2
+    contrast: 0.2
+    saturation: 0.2
+    hue: 0.05
+stage1:
+  epochs: 2
+  lr: 0.0001
+  weight_decay: 0.0001
+  batch_size: 16
+  loss: hsrl
+  alpha: 1.0
+  beta: 0.5
+  gamma: 0.5
+  terms:
+  - 1
+  - 2
+  - 3
+  conf_rule: second_nearest
+  log_tuples: true
+stage2:
+  epochs: 2
+  lr: 0.001
+  weight_decay: 0.0001
+  batch_size: 16
+  targets: hard
+stage3:
+  epochs: 2
+  lr: 1.0e-05
+  weight_decay: 0.0001
+  batch_size: 16
+  tau: 0.85
+  refresh_every_epoch: false
+  labelled_targets: hard
+supervised:
+  epochs: 2
+  lr: 0.0001
+  weight_decay: 0.0001
+  batch_size: 16
+  targets: hard
+eval:
+  splits:
+  - val
+  - test
+  save_embeddings: true

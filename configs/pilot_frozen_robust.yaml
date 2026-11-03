@@ -1,0 +1,9 @@
+# EXPLORATORY PILOT, robustness checks (secondary to the pre-registered result in configs/pilot_frozen.yaml):
+# 5 permutation draws for the linkage test, and a consistent reader renaming that must change nothing.
+base: configs/pilot_frozen.yaml
+results_dir: results/pilot_frozen_robust
+report: robustness
+permutation_draws: [0, 1, 2, 3, 4]
+methods: [interval_linked, interval_linked_renamed, worstcase_linked, worstcase_linked_renamed,
+          interval_permuted_p0, interval_permuted_p1, interval_permuted_p2, interval_permuted_p3, interval_permuted_p4,
+          worstcase_permuted_p0, worstcase_permuted_p1, worstcase_permuted_p2, worstcase_permuted_p3, worstcase_permuted_p4]

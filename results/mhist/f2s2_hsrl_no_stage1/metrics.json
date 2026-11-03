@@ -1,0 +1,274 @@
+{
+  "run_dir": "results\\mhist\\f2s2_hsrl_no_stage1",
+  "dataset": "mhist/labels_p10/draw2",
+  "data": {
+    "labelled": 218,
+    "labelled_per_class": {
+      "0": 155,
+      "1": 63
+    },
+    "unlabelled": 1739,
+    "val": 218,
+    "test": 977
+  },
+  "params": {
+    "f": 7700994,
+    "g": 2164224,
+    "h": 2818,
+    "f+h (inference)": 7703812,
+    "total (training)": 9868036
+  },
+  "env": {
+    "torch": "2.14.0+cu130",
+    "cuda": "13.0",
+    "timm": "1.0.30",
+    "gpu": "NVIDIA GeForce RTX 5050 Laptop GPU",
+    "max_gpu_mem_gb": 2.38
+  },
+  "stage2": [
+    {
+      "epoch": 0,
+      "loss": 0.582992183310645,
+      "train_acc": 0.6788990825688074,
+      "sec": 4.661764621734619
+    },
+    {
+      "epoch": 1,
+      "loss": 0.5129293118204389,
+      "train_acc": 0.7339449541284404,
+      "sec": 0.5959601402282715
+    },
+    {
+      "epoch": 2,
+      "loss": 0.43250128626823425,
+      "train_acc": 0.8027522935779816,
+      "sec": 0.6344902515411377
+    },
+    {
+      "epoch": 3,
+      "loss": 0.43019462483269827,
+      "train_acc": 0.7981651376146789,
+      "sec": 0.6178510189056396
+    },
+    {
+      "epoch": 4,
+      "loss": 0.4020425592150007,
+      "train_acc": 0.8165137614678899,
+      "sec": 0.5586848258972168
+    }
+  ],
+  "eval_stage2": {
+    "val": {
+      "overall": {
+        "n": 218,
+        "acc": 0.7615,
+        "bal_acc": 0.6815,
+        "macro_f1": 0.6912,
+        "brier": 0.1702,
+        "macro_precision": 0.7081,
+        "auroc": 0.761
+      },
+      "unanimous": {
+        "n": 81,
+        "acc": 0.8519,
+        "bal_acc": 0.7985,
+        "macro_f1": 0.8071,
+        "brier": 0.1066,
+        "macro_precision": 0.8176,
+        "auroc": 0.9106
+      },
+      "split_vote": {
+        "n": 137,
+        "acc": 0.708,
+        "bal_acc": 0.617,
+        "macro_f1": 0.6232,
+        "brier": 0.2078,
+        "macro_precision": 0.6401,
+        "auroc": 0.6502
+      }
+    },
+    "test": {
+      "overall": {
+        "n": 977,
+        "acc": 0.7666,
+        "bal_acc": 0.736,
+        "macro_f1": 0.7418,
+        "brier": 0.1623,
+        "macro_precision": 0.7518,
+        "auroc": 0.8257
+      },
+      "unanimous": {
+        "n": 323,
+        "acc": 0.839,
+        "bal_acc": 0.8275,
+        "macro_f1": 0.8322,
+        "brier": 0.1261,
+        "macro_precision": 0.8415,
+        "auroc": 0.9132
+      },
+      "split_vote": {
+        "n": 654,
+        "acc": 0.7309,
+        "bal_acc": 0.6844,
+        "macro_f1": 0.6898,
+        "brier": 0.1801,
+        "macro_precision": 0.6992,
+        "auroc": 0.7703
+      }
+    }
+  },
+  "stage3": [
+    {
+      "epoch": 0,
+      "loss": 0.6139401042902911,
+      "n_pseudo": 645,
+      "pseudo_coverage": 0.3709028177113283,
+      "sec": 16.894137144088745
+    },
+    {
+      "epoch": 1,
+      "loss": 0.5342238457114609,
+      "n_pseudo": 645,
+      "pseudo_coverage": 0.3709028177113283,
+      "sec": 3.4812686443328857
+    },
+    {
+      "epoch": 2,
+      "loss": 0.4648173153400421,
+      "n_pseudo": 645,
+      "pseudo_coverage": 0.3709028177113283,
+      "sec": 3.4380271434783936
+    },
+    {
+      "epoch": 3,
+      "loss": 0.4073259488300041,
+      "n_pseudo": 645,
+      "pseudo_coverage": 0.3709028177113283,
+      "sec": 3.470285177230835
+    },
+    {
+      "epoch": 4,
+      "loss": 0.3641427954037984,
+      "n_pseudo": 645,
+      "pseudo_coverage": 0.3709028177113283,
+      "sec": 3.4334893226623535
+    },
+    {
+      "epoch": 5,
+      "loss": 0.31180592433170035,
+      "n_pseudo": 645,
+      "pseudo_coverage": 0.3709028177113283,
+      "sec": 3.412806749343872
+    },
+    {
+      "epoch": 6,
+      "loss": 0.27968835168414646,
+      "n_pseudo": 645,
+      "pseudo_coverage": 0.3709028177113283,
+      "sec": 3.507768392562866
+    },
+    {
+      "epoch": 7,
+      "loss": 0.2502259187124394,
+      "n_pseudo": 645,
+      "pseudo_coverage": 0.3709028177113283,
+      "sec": 3.488703489303589
+    },
+    {
+      "epoch": 8,
+      "loss": 0.23164232903056675,
+      "n_pseudo": 645,
+      "pseudo_coverage": 0.3709028177113283,
+      "sec": 3.445136070251465
+    },
+    {
+      "epoch": 9,
+      "loss": 0.21082984297363846,
+      "n_pseudo": 645,
+      "pseudo_coverage": 0.3709028177113283,
+      "sec": 3.4894649982452393
+    }
+  ],
+  "eval_stage3": {
+    "val": {
+      "overall": {
+        "n": 218,
+        "acc": 0.7477,
+        "bal_acc": 0.6671,
+        "macro_f1": 0.6752,
+        "brier": 0.1767,
+        "macro_precision": 0.6891,
+        "auroc": 0.7498
+      },
+      "unanimous": {
+        "n": 81,
+        "acc": 0.8395,
+        "bal_acc": 0.7758,
+        "macro_f1": 0.7877,
+        "brier": 0.1028,
+        "macro_precision": 0.8039,
+        "auroc": 0.9176
+      },
+      "split_vote": {
+        "n": 137,
+        "acc": 0.6934,
+        "bal_acc": 0.6066,
+        "macro_f1": 0.6112,
+        "brier": 0.2203,
+        "macro_precision": 0.6222,
+        "auroc": 0.6352
+      }
+    },
+    "test": {
+      "overall": {
+        "n": 977,
+        "acc": 0.74,
+        "bal_acc": 0.7224,
+        "macro_f1": 0.7216,
+        "brier": 0.1725,
+        "macro_precision": 0.7209,
+        "auroc": 0.8094
+      },
+      "unanimous": {
+        "n": 323,
+        "acc": 0.8359,
+        "bal_acc": 0.8277,
+        "macro_f1": 0.8304,
+        "brier": 0.1207,
+        "macro_precision": 0.8346,
+        "auroc": 0.9146
+      },
+      "split_vote": {
+        "n": 654,
+        "acc": 0.6927,
+        "bal_acc": 0.6662,
+        "macro_f1": 0.6633,
+        "brier": 0.1981,
+        "macro_precision": 0.6613,
+        "auroc": 0.7453
+      }
+    }
+  },
+  "pseudo_label_diagnostics": {
+    "pseudo_labels_round0": {
+      "tau": 0.85,
+      "pool": 1739,
+      "accepted": 645,
+      "coverage": 0.3709,
+      "overall": {
+        "n": 645,
+        "precision": 0.9209
+      },
+      "unanimous": {
+        "n": 239,
+        "precision": 0.9833
+      },
+      "split_vote": {
+        "n": 406,
+        "precision": 0.8842
+      },
+      "tie_accepted": 0
+    }
+  },
+  "wall_time_sec": 116.4
+}

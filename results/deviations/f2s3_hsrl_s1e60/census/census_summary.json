@@ -1,0 +1,420 @@
+{
+  "run": "results\\deviations\\f2s3_hsrl_s1e60",
+  "n_labelled": 509,
+  "min_shared": 3,
+  "B_epochs": [
+    0,
+    29,
+    59
+  ],
+  "pair_info": {
+    "A_random": {
+      "ap": {
+        "mean_shared": 3.29422,
+        "n_pairs_lt3_shared": 14986,
+        "n_pairs": 100000
+      },
+      "an": {
+        "mean_shared": 3.27664,
+        "n_pairs_lt3_shared": 15650,
+        "n_pairs": 100000
+      },
+      "nc": {
+        "mean_shared": 3.26152,
+        "n_pairs_lt3_shared": 16100,
+        "n_pairs": 100000
+      },
+      "ac": {
+        "mean_shared": 3.27872,
+        "n_pairs_lt3_shared": 15480,
+        "n_pairs": 100000
+      }
+    },
+    "B_mined_epoch0": {
+      "ap": {
+        "mean_shared": 3.22265625,
+        "n_pairs_lt3_shared": 78,
+        "n_pairs": 512
+      },
+      "an": {
+        "mean_shared": 3.236328125,
+        "n_pairs_lt3_shared": 94,
+        "n_pairs": 512
+      },
+      "nc": {
+        "mean_shared": 3.21875,
+        "n_pairs_lt3_shared": 81,
+        "n_pairs": 512
+      },
+      "ac": {
+        "mean_shared": 3.259765625,
+        "n_pairs_lt3_shared": 82,
+        "n_pairs": 512
+      }
+    },
+    "B_mined_epoch29": {
+      "ap": {
+        "mean_shared": 3.275390625,
+        "n_pairs_lt3_shared": 89,
+        "n_pairs": 512
+      },
+      "an": {
+        "mean_shared": 3.23828125,
+        "n_pairs_lt3_shared": 80,
+        "n_pairs": 512
+      },
+      "nc": {
+        "mean_shared": 3.134765625,
+        "n_pairs_lt3_shared": 106,
+        "n_pairs": 512
+      },
+      "ac": {
+        "mean_shared": 3.212890625,
+        "n_pairs_lt3_shared": 85,
+        "n_pairs": 512
+      }
+    },
+    "B_mined_epoch59": {
+      "ap": {
+        "mean_shared": 3.310546875,
+        "n_pairs_lt3_shared": 69,
+        "n_pairs": 512
+      },
+      "an": {
+        "mean_shared": 3.140625,
+        "n_pairs_lt3_shared": 109,
+        "n_pairs": 512
+      },
+      "nc": {
+        "mean_shared": 3.138671875,
+        "n_pairs_lt3_shared": 99,
+        "n_pairs": 512
+      },
+      "ac": {
+        "mean_shared": 3.23828125,
+        "n_pairs_lt3_shared": 82,
+        "n_pairs": 512
+      }
+    }
+  },
+  "crosstabs": {
+    "A_random": {
+      "1": {
+        "skipped": {
+          "certified": 23404,
+          "undecided": 1150
+        },
+        "supported": {
+          "certified": 71413,
+          "undecided": 1492
+        },
+        "tie": {
+          "certified": 1668,
+          "undecided": 244
+        },
+        "violated": {
+          "certified": 223,
+          "undecided": 406
+        }
+      },
+      "2": {
+        "skipped": {
+          "certified": 9890,
+          "contradicted": 7519,
+          "undecided": 11396
+        },
+        "supported": {
+          "certified": 22471,
+          "contradicted": 105,
+          "undecided": 3455
+        },
+        "tie": {
+          "certified": 4201,
+          "contradicted": 2876,
+          "undecided": 19279
+        },
+        "violated": {
+          "certified": 85,
+          "contradicted": 15467,
+          "undecided": 3256
+        }
+      },
+      "3": {
+        "skipped": {
+          "certified": 23141,
+          "undecided": 1178
+        },
+        "supported": {
+          "certified": 71701,
+          "undecided": 1450
+        },
+        "tie": {
+          "certified": 1662,
+          "undecided": 242
+        },
+        "violated": {
+          "certified": 223,
+          "undecided": 403
+        }
+      }
+    },
+    "B_mined_epoch0": {
+      "1": {
+        "skipped": {
+          "certified": 135,
+          "undecided": 3
+        },
+        "supported": {
+          "certified": 348,
+          "undecided": 9
+        },
+        "tie": {
+          "certified": 10,
+          "undecided": 3
+        },
+        "violated": {
+          "certified": 1,
+          "undecided": 3
+        }
+      },
+      "2": {
+        "skipped": {
+          "certified": 43,
+          "contradicted": 43,
+          "undecided": 64
+        },
+        "supported": {
+          "certified": 91,
+          "contradicted": 0,
+          "undecided": 21
+        },
+        "tie": {
+          "certified": 21,
+          "contradicted": 27,
+          "undecided": 103
+        },
+        "violated": {
+          "certified": 0,
+          "contradicted": 83,
+          "undecided": 16
+        }
+      },
+      "3": {
+        "skipped": {
+          "certified": 122,
+          "undecided": 7
+        },
+        "supported": {
+          "certified": 350,
+          "undecided": 16
+        },
+        "tie": {
+          "certified": 14,
+          "undecided": 1
+        },
+        "violated": {
+          "certified": 1,
+          "undecided": 1
+        }
+      }
+    },
+    "B_mined_epoch29": {
+      "1": {
+        "skipped": {
+          "certified": 120,
+          "undecided": 12
+        },
+        "supported": {
+          "certified": 361,
+          "undecided": 8
+        },
+        "tie": {
+          "certified": 6,
+          "undecided": 1
+        },
+        "violated": {
+          "certified": 2,
+          "undecided": 2
+        }
+      },
+      "2": {
+        "skipped": {
+          "certified": 62,
+          "contradicted": 50,
+          "undecided": 68
+        },
+        "supported": {
+          "certified": 106,
+          "contradicted": 0,
+          "undecided": 16
+        },
+        "tie": {
+          "certified": 14,
+          "contradicted": 8,
+          "undecided": 99
+        },
+        "violated": {
+          "certified": 0,
+          "contradicted": 78,
+          "undecided": 11
+        }
+      },
+      "3": {
+        "skipped": {
+          "certified": 131,
+          "undecided": 8
+        },
+        "supported": {
+          "certified": 353,
+          "undecided": 7
+        },
+        "tie": {
+          "certified": 7,
+          "undecided": 0
+        },
+        "violated": {
+          "certified": 2,
+          "undecided": 4
+        }
+      }
+    },
+    "B_mined_epoch59": {
+      "1": {
+        "skipped": {
+          "certified": 137,
+          "undecided": 9
+        },
+        "supported": {
+          "certified": 337,
+          "undecided": 11
+        },
+        "tie": {
+          "certified": 7,
+          "undecided": 6
+        },
+        "violated": {
+          "certified": 0,
+          "undecided": 5
+        }
+      },
+      "2": {
+        "skipped": {
+          "certified": 36,
+          "contradicted": 54,
+          "undecided": 64
+        },
+        "supported": {
+          "certified": 159,
+          "contradicted": 0,
+          "undecided": 23
+        },
+        "tie": {
+          "certified": 22,
+          "contradicted": 12,
+          "undecided": 53
+        },
+        "violated": {
+          "certified": 0,
+          "contradicted": 70,
+          "undecided": 19
+        }
+      },
+      "3": {
+        "skipped": {
+          "certified": 120,
+          "undecided": 6
+        },
+        "supported": {
+          "certified": 356,
+          "undecided": 11
+        },
+        "tie": {
+          "certified": 14,
+          "undecided": 3
+        },
+        "violated": {
+          "certified": 0,
+          "undecided": 2
+        }
+      }
+    }
+  },
+  "pseudo_label_concentration": {
+    "n_accepted_nontie": 3905,
+    "n_wrong_confident": 324,
+    "nbr_viol_rate": {
+      "mean_wrong": 0.06673889076482324,
+      "mean_correct": 0.0644060943036293,
+      "auroc_predicting_wrong": 0.5498856275059385,
+      "perm_p": 0.001,
+      "within_unanimous": {
+        "n": 2849,
+        "n_wrong": 117,
+        "auroc_predicting_wrong": 0.6465802580370663,
+        "perm_p": 0.0
+      },
+      "within_split_vote": {
+        "n": 1056,
+        "n_wrong": 207,
+        "auroc_predicting_wrong": 0.3822342852915906,
+        "perm_p": 0.0
+      }
+    },
+    "nbr_undecided_rate": {
+      "mean_wrong": 0.14695968710412227,
+      "mean_correct": 0.14303500955357815,
+      "auroc_predicting_wrong": 0.5587053240525269,
+      "perm_p": 0.0005,
+      "within_unanimous": {
+        "n": 2849,
+        "n_wrong": 117,
+        "auroc_predicting_wrong": 0.6334656680557119,
+        "perm_p": 0.0
+      },
+      "within_split_vote": {
+        "n": 1056,
+        "n_wrong": 207,
+        "auroc_predicting_wrong": 0.41285285900434154,
+        "perm_p": 0.0
+      }
+    },
+    "nbr_label_disagree": {
+      "mean_wrong": 0.0,
+      "mean_correct": 0.00011170064227869311,
+      "auroc_predicting_wrong": 0.4998603741971516,
+      "perm_p": 1.0,
+      "within_unanimous": {
+        "n": 2849,
+        "n_wrong": 117,
+        "auroc_predicting_wrong": 0.49981698389458273,
+        "perm_p": 1.0
+      },
+      "within_split_vote": {
+        "n": 1056,
+        "n_wrong": 207,
+        "auroc_predicting_wrong": 0.5,
+        "perm_p": 1.0
+      }
+    },
+    "core_level": {
+      "n_cores": 117,
+      "min_accepted_per_core": 5,
+      "n_patches": 3855,
+      "viol_rate": {
+        "spearman": 0.0984492830020448,
+        "perm_p": 0.2902,
+        "partial_spearman_ctrl_split_frac": -0.11918458531603122,
+        "partial_perm_p": 0.199
+      },
+      "undecided_rate": {
+        "spearman": 0.37022299118212443,
+        "perm_p": 0.0,
+        "partial_spearman_ctrl_split_frac": -0.015747456315601562,
+        "partial_perm_p": 0.8668
+      }
+    },
+    "error_rate_unanimous": 0.041067041067041066,
+    "error_rate_split_vote": 0.19602272727272727
+  },
+  "caveat": "counts-only bounds assume a common reader panel; Gleason readers vary per core and per patch"
+}

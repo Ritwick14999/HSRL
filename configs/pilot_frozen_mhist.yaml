@@ -1,0 +1,47 @@
+# EXPLORATORY PILOT on MHIST (counts only): interval losses on frozen ImageNet EfficientNet-B2 features.
+# Same design and hyperparameters as configs/pilot_frozen.yaml (Gleason). MHIST has no reader identities, so only
+# the counts_only vote mode exists (no linked / permuted / annotator-aware methods). Fixed in advance (D40):
+# 5 labelled draws x 3 seeds = 15 pairs; success = >= +1 point on balanced or split-vote accuracy over the best
+# baseline in >= 12/15 pairs and on >= 4/5 draws. Nothing is tuned on validation or test.
+results_dir: results/pilot_frozen_mhist
+features_path: data/processed/mhist/features_effb2_imagenet.npz
+seed_base: 20261031
+folds: [0, 1, 2, 3, 4]        # labelled draws of data/mhist_prepare.py
+seeds: [0, 1, 2]
+min_shared: 3
+retrieval_pairs: 20000        # unused on MHIST (needs linked test votes)
+criterion: {pairs: 12, folds: 4}
+
+data:
+  dataset: mhist
+  processed_root: data/processed/mhist
+  image_root: data/mhist
+  labelled_pct: 10
+  tile_size: 224              # unused for MHIST (native 224 px images)
+  benign_rule: drop           # unused for MHIST
+  exclude_readers: []
+  fold: 0
+  vote_mode: counts_only
+  include_ties: false
+  unlabelled_pool: filtered
+  num_workers: 4
+
+augment: {hflip: 0.5, vflip: 0.5, rotation: rot90, rotation_p: 0.5, color_jitter: null}   # unused: features have no augmentation
+
+methods: [probe_hard, probe_soft, hsrl_t13, interval_counts_only, worstcase_counts_only]
+
+head:
+  hidden: 512
+  dim: 128
+  tuples_per_anchor: 20
+  batch_tuples: 256
+  epochs: 50
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+  alpha: 1.0
+  gamma: 0.5
+
+probe:
+  steps: 500
+  lr: 1.0e-2
+  weight_decay: 1.0e-4

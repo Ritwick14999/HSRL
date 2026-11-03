@@ -1,0 +1,19 @@
+# Phase 1b: per-reader patch labels, binary votes, patch filtering, slide-grouped folds
+# (data/gleason_labels.py). Any key can be overridden on the command line: key=value.
+processed_root: data/processed/gleason
+tile_size: 512
+n_readers: 6
+exclude_readers: []          # e.g. [2] to rerun without Map2; excluded readers become NA everywhere
+min_coverage: 0.6            # reader's dominant class must cover >= 60% of the patch's tissue pixels
+                             # (value 0 = unannotated counts as its own class; dominant 0 -> no label)
+benign_rule: ignore          # ignore: benign reader -> NA | drop: drop the patch if any reader says benign
+min_valid_readers: 3         # keep a patch only if >= this many readers give a valid G3 / G4-or-5 label
+exclude_ties_from_training: true
+# 3 folds; each holds out 2 slides as test. Chosen with --choose-folds (see ASSUMPTIONS.md A1.9).
+folds:
+  - [slide001, slide003]
+  - [slide002, slide005]
+  - [slide006, slide007]
+val_frac: 0.15               # fraction of training-slide patches held out as validation (grouped by core)
+labelled_frac: 0.10          # fraction of the train split marked labelled (stratified by majority label)
+seed: 0

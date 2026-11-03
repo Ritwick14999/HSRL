@@ -1,0 +1,10 @@
+# EXPLORATORY PILOT on MHIST (counts only), D42: the D40 pilot repeated on FINE-TUNED features.
+# Everything (methods, head, probe, tuples, seeds, criterion) is inherited from pilot_frozen_mhist.yaml; only the
+# features change. Draw k uses the backbone of results/mhist/f{k}s{k}_supervised (end-to-end CE on draw k's 218
+# labelled images only; checked by check_backbone_source). Fixed in advance: success = >= +1 point on balanced or
+# split-vote accuracy over the best baseline in >= 12/15 pairs and on >= 4/5 draws. Nothing is tuned.
+base: configs/pilot_frozen_mhist.yaml
+results_dir: results/pilot_ft_mhist
+features_name: fine-tuned features (supervised 10% backbone of each draw)
+features_path: data/processed/mhist/features_effb2_ft_supervised_draw{fold}.npz
+backbone_ckpt: results/mhist/f{fold}s{fold}_supervised/model_final.pt

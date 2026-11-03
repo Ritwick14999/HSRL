@@ -1,0 +1,185 @@
+{
+  "run": "results\\mhist\\f1s1_hsrl",
+  "n_labelled": 218,
+  "min_shared": 3,
+  "B_epochs": [
+    0,
+    29
+  ],
+  "pair_info": {
+    "A_random": {
+      "ap": {
+        "mean_shared": 0.0,
+        "n_pairs_lt3_shared": 100000,
+        "n_pairs": 100000
+      },
+      "an": {
+        "mean_shared": 0.0,
+        "n_pairs_lt3_shared": 100000,
+        "n_pairs": 100000
+      },
+      "nc": {
+        "mean_shared": 0.0,
+        "n_pairs_lt3_shared": 100000,
+        "n_pairs": 100000
+      },
+      "ac": {
+        "mean_shared": 0.0,
+        "n_pairs_lt3_shared": 100000,
+        "n_pairs": 100000
+      }
+    },
+    "B_mined_epoch0": {
+      "ap": {
+        "mean_shared": 0.0,
+        "n_pairs_lt3_shared": 224,
+        "n_pairs": 224
+      },
+      "an": {
+        "mean_shared": 0.0,
+        "n_pairs_lt3_shared": 224,
+        "n_pairs": 224
+      },
+      "nc": {
+        "mean_shared": 0.0,
+        "n_pairs_lt3_shared": 224,
+        "n_pairs": 224
+      },
+      "ac": {
+        "mean_shared": 0.0,
+        "n_pairs_lt3_shared": 224,
+        "n_pairs": 224
+      }
+    },
+    "B_mined_epoch29": {
+      "ap": {
+        "mean_shared": 0.0,
+        "n_pairs_lt3_shared": 224,
+        "n_pairs": 224
+      },
+      "an": {
+        "mean_shared": 0.0,
+        "n_pairs_lt3_shared": 224,
+        "n_pairs": 224
+      },
+      "nc": {
+        "mean_shared": 0.0,
+        "n_pairs_lt3_shared": 224,
+        "n_pairs": 224
+      },
+      "ac": {
+        "mean_shared": 0.0,
+        "n_pairs_lt3_shared": 224,
+        "n_pairs": 224
+      }
+    }
+  },
+  "crosstabs": {
+    "A_random": {
+      "1": {
+        "skipped": {
+          "certified": 86338,
+          "undecided": 13662
+        }
+      },
+      "2": {
+        "skipped": {
+          "certified": 23658,
+          "contradicted": 20664,
+          "undecided": 55678
+        }
+      },
+      "3": {
+        "skipped": {
+          "certified": 86294,
+          "undecided": 13706
+        }
+      }
+    },
+    "B_mined_epoch0": {
+      "1": {
+        "skipped": {
+          "certified": 193,
+          "undecided": 31
+        }
+      },
+      "2": {
+        "skipped": {
+          "certified": 48,
+          "contradicted": 43,
+          "undecided": 133
+        }
+      },
+      "3": {
+        "skipped": {
+          "certified": 191,
+          "undecided": 33
+        }
+      }
+    },
+    "B_mined_epoch29": {
+      "1": {
+        "skipped": {
+          "certified": 180,
+          "undecided": 44
+        }
+      },
+      "2": {
+        "skipped": {
+          "certified": 53,
+          "contradicted": 43,
+          "undecided": 128
+        }
+      },
+      "3": {
+        "skipped": {
+          "certified": 175,
+          "undecided": 49
+        }
+      }
+    }
+  },
+  "pseudo_label_concentration": {
+    "n_accepted_nontie": 1283,
+    "n_wrong_confident": 111,
+    "nbr_undecided_rate": {
+      "mean_wrong": 0.3130986998885827,
+      "mean_correct": 0.2868242838462369,
+      "auroc_predicting_wrong": 0.6218176367493774,
+      "perm_p": 0.0,
+      "within_unanimous": {
+        "n": 485,
+        "n_wrong": 5,
+        "auroc_predicting_wrong": 0.7633333333333333,
+        "perm_p": 0.0375
+      },
+      "within_split_vote": {
+        "n": 798,
+        "n_wrong": 106,
+        "auroc_predicting_wrong": 0.5939033700512597,
+        "perm_p": 0.0015
+      }
+    },
+    "nbr_label_disagree": {
+      "mean_wrong": 0.009009009009009009,
+      "mean_correct": 0.0029010238907849826,
+      "auroc_predicting_wrong": 0.5023906158718444,
+      "perm_p": 0.707,
+      "within_unanimous": {
+        "n": 485,
+        "n_wrong": 5,
+        "auroc_predicting_wrong": 0.49583333333333335,
+        "perm_p": 1.0
+      },
+      "within_split_vote": {
+        "n": 798,
+        "n_wrong": 106,
+        "auroc_predicting_wrong": 0.5040012542261971,
+        "perm_p": 0.131
+      }
+    },
+    "error_rate_unanimous": 0.010309278350515464,
+    "error_rate_split_vote": 0.13283208020050125
+  },
+  "caveat": "counts-only bounds assume a common reader panel; Gleason readers vary per core and per patch"
+}

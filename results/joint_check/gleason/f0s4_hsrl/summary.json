@@ -1,0 +1,81 @@
+{
+  "run": "results\\main\\f0s4_hsrl",
+  "dataset": "gleason",
+  "n_labelled": 488,
+  "models": [
+    "relax"
+  ],
+  "stage1_epoch_used": 29,
+  "sets": {
+    "mined_last_epoch": {
+      "n_tuples": 512,
+      "mean_t": {
+        "ap": 0.9947049270088151,
+        "an": 0.9926604025643513,
+        "ac": 0.9922684169447007,
+        "pn": 0.9925212896263162,
+        "pc": 0.9922470333035543,
+        "nc": 0.9940437228089622
+      },
+      "relax": {
+        "pct_gap": 10.7421875,
+        "mean_rel_gap": 0.01217517831918636,
+        "mean_rel_gap_given_gap": 0.11333984180769838,
+        "p90_rel_gap": 0.08126358107107493,
+        "mean_grad_cos_given_gap": 0.9678707506081276,
+        "pct_gap_by_n_split": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 100.0,
+          "4": 100.0
+        },
+        "n_by_n_split": {
+          "0": 78,
+          "1": 221,
+          "2": 158,
+          "3": 51,
+          "4": 4
+        },
+        "n_scope": 200,
+        "pct_all_vertices_feasible": 90.0,
+        "mean_frac_vertices_feasible": 0.957890625
+      }
+    },
+    "random": {
+      "n_tuples": 1000,
+      "mean_t": {
+        "ap": 0.994793159246997,
+        "an": 0.9915624030494892,
+        "ac": 0.9914582232587477,
+        "pn": 0.9914465580495716,
+        "pc": 0.9912662691297618,
+        "nc": 0.9946382001199098
+      },
+      "relax": {
+        "pct_gap": 8.5,
+        "mean_rel_gap": 0.00974836361936207,
+        "mean_rel_gap_given_gap": 0.11468663081602419,
+        "p90_rel_gap": 1.343095791401572e-16,
+        "mean_grad_cos_given_gap": 0.9671932813663399,
+        "pct_gap_by_n_split": {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 100.0,
+          "4": 100.0
+        },
+        "n_by_n_split": {
+          "0": 198,
+          "1": 415,
+          "2": 302,
+          "3": 79,
+          "4": 6
+        },
+        "n_scope": 200,
+        "pct_all_vertices_feasible": 87.5,
+        "mean_frac_vertices_feasible": 0.94375
+      }
+    }
+  }
+}

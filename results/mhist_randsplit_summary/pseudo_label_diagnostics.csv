@@ -1,0 +1,11 @@
+run,fold,seed,cfg,coverage,precision,prec_unanimous,prec_split,accepted
+f0s0_hsrl,0,0,hsrl,0.7292,0.8912,0.9613,0.8468,1268
+f0s0_hsrl_no_stage1,0,0,hsrl_no_stage1,0.4215,0.9168,0.964,0.8879,733
+f1s1_hsrl,1,1,hsrl,0.7142,0.9002,0.9718,0.8579,1242
+f1s1_hsrl_no_stage1,1,1,hsrl_no_stage1,0.3565,0.9242,0.9667,0.8974,620
+f2s2_hsrl,2,2,hsrl,0.6613,0.8974,0.9692,0.8504,1150
+f2s2_hsrl_no_stage1,2,2,hsrl_no_stage1,0.2841,0.9393,0.9849,0.9085,494
+f3s3_hsrl,3,3,hsrl,0.6555,0.9184,0.9795,0.8803,1140
+f3s3_hsrl_no_stage1,3,3,hsrl_no_stage1,0.3111,0.9445,0.99,0.9179,541
+f4s4_hsrl,4,4,hsrl,0.7309,0.8883,0.9601,0.8416,1271
+f4s4_hsrl_no_stage1,4,4,hsrl_no_stage1,0.3462,0.9219,0.9673,0.8908,602

@@ -1,0 +1,81 @@
+# HSRL on Gleason2019 (main setting: p512, benign-drop). Paper values are marked [paper];
+# everything else is an assumption documented in ASSUMPTIONS.md.
+run_name: null                # default: <method>_<dataset>_fold<k>_seed<s>
+results_root: results
+overwrite: false
+seed: 0
+device: cuda
+amp: bf16                     # bf16 | fp16 | none
+method: hsrl                  # hsrl | supervised
+
+data:
+  dataset: gleason
+  processed_root: data/processed/gleason
+  tile_size: 512              # main setting; 1024 is a later sensitivity check
+  benign_rule: drop
+  exclude_readers: []         # e.g. [1], [2], [1, 2]; selects the matching pre-built label set
+  fold: 0
+  vote_mode: linked           # linked | permuted | counts_only   (labelled set only)
+  vote_seed: 0
+  include_ties: false         # ties are never used for hard-target training
+  unlabelled_pool: filtered   # filtered (vote-filtered train_unlabelled) | all_tissue (robustness option)
+  subset: null                # smoke test only
+  num_workers: 4
+
+model:
+  backbone: efficientnet_b2   # [paper] ImageNet-pretrained
+  pretrained: true
+  proj_hidden: null           # null = backbone feature dim (1408)
+  proj_dim: 128               # [paper]
+
+augment:                      # [paper] h/v flips, rotation, colour jitter; input 224x224
+  hflip: 0.5
+  vflip: 0.5
+  rotation: rot90             # rot90 = random 0/90/180/270 (user decision D13) | rot180 (p = rotation_p) | none
+  rotation_p: 0.5
+  color_jitter: {brightness: 0.2, contrast: 0.2, saturation: 0.2, hue: 0.05}
+
+stage1:                       # Structural Representation Anchoring: f + g, labelled data only
+  enabled: true               # false = ablation "w/o Stage I": Stage II on ImageNet features, then Stage III
+  epochs: 30                  # [paper]
+  lr: 1.0e-4                  # [paper] AdamW
+  weight_decay: 1.0e-4        # [paper]
+  batch_size: 32              # class-balanced: 16 per class
+  loss: hsrl
+  alpha: 1.0                  # [paper]
+  beta: 0.5                   # [paper]
+  gamma: 0.5                  # [paper]
+  terms: [1, 2, 3]            # [1, 3] = HSRL without term 2
+  conf_rule: second_nearest   # second_nearest (default) | boundary
+  log_tuples: true
+
+stage2:                       # Classifier warm-up: f, g frozen; h trained with CE
+  epochs: 5                   # [paper]
+  lr: 1.0e-3                  # [paper]
+  weight_decay: 1.0e-4
+  batch_size: 32
+  targets: hard               # hard (original HSRL) | soft (1-q, q)
+
+stage3:                       # Confidence-guided self-training: all parameters, labelled + pseudo-labelled
+  epochs: 10                  # [paper]
+  lr: 1.0e-5                  # [paper]
+  weight_decay: 1.0e-4
+  batch_size: 32
+  tau: 0.85                   # [paper]
+  refresh_every_epoch: false  # pseudo-labels predicted once (default)
+  labelled_targets: hard
+
+supervised:                   # supervised-only baseline (labelled 10%, CE); schedule set in Phase 3
+  epochs: 35
+  lr: 1.0e-4
+  weight_decay: 1.0e-4
+  batch_size: 32
+  targets: hard
+
+monitor:                      # Stage I collapse monitoring every epoch (null disables)
+  n_val: 512                  # fixed val subset for embedding spread and kNN
+  k: 5
+
+eval:
+  splits: [val, test]
+  save_embeddings: true

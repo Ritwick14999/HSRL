@@ -1,0 +1,13 @@
+# Phase 1a: tiling + tissue masks + per-reader class counts (data/gleason_extract.py)
+raw_root: data/gleason            # TrainImgs/ and Map1..Map6/ (one folder per pathologist)
+out_root: data/processed/gleason  # writes p{T}/tiles_raw.csv and p{T}/images/
+n_readers: 6
+tile_sizes: [512, 1024]           # native-resolution, non-overlapping; grid centred on the image
+patch_out_size: 224               # saved patch size (LANCZOS resize)
+tissue:
+  method: otsu                    # otsu | fixed  (on HSV saturation, per core)
+  otsu_downsample: 8              # Otsu threshold estimated on an 8x-downsampled saturation image
+  fixed_threshold: 25             # used when method == fixed (0-255 saturation)
+  min_tissue_frac: 0.5            # keep tiles with >= 50% tissue pixels
+agreement_downsample: 4           # pixel-level inter-reader confusion on tissue pixels (stride)
+workers: 2

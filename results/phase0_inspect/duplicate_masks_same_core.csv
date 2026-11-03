@@ -1,0 +1,10 @@
+core_id,map,width,height,mode,file_md5,array_md5,size_matches_image,png_info,multichannel
+slide003_core114,3,5120,5120,L,9aeea904c9f89f20b704ae9201673864,bed3c0a4a1407f584989b4009e9ce33f,True,{},False
+slide003_core114,6,5120,5120,L,0360721ab6cbbfc4960c88705650e7a6,bed3c0a4a1407f584989b4009e9ce33f,True,{},False
+slide005_core009,3,5120,4608,L,32cc3bef59afaf272332df742fd6a70f,fc888af4fdbfac1c897bf345b8a892df,True,{},False
+slide005_core009,4,5120,4608,L,5ad82d7df584c95bbf436d93496f0e9a,fc888af4fdbfac1c897bf345b8a892df,True,{},False
+slide005_core009,5,5120,4608,L,5f972f415481164250c8758680fca873,fc888af4fdbfac1c897bf345b8a892df,True,{},False
+slide005_core102,3,5120,5120,L,4798a9434a8ec284ab6dbe75b65883df,bed3c0a4a1407f584989b4009e9ce33f,True,{},False
+slide005_core102,5,5120,5120,L,2a5d01965840f967617671af7055b384,bed3c0a4a1407f584989b4009e9ce33f,True,{},False
+slide007_core078,1,4608,4608,L,70318f47614f7b6a09abc143c3249554,baded95e78504b4e6924e1e9acd94645,True,{},False
+slide007_core078,5,4608,4608,L,586e2c551bd1c56ce31430c62afe4763,baded95e78504b4e6924e1e9acd94645,True,{},False

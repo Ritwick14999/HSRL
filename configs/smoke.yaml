@@ -1,0 +1,11 @@
+# Smoke test: tiny subset, 2 epochs per stage. Usage:
+#   python -I hsrl/train.py --config configs/smoke.yaml
+base: configs/hsrl_gleason.yaml
+run_name: smoke_hsrl_fold0
+overwrite: true
+data:
+  subset: {labelled_per_class: 64, unlabelled: 256, val: 64, test: 128}
+stage1: {epochs: 2, batch_size: 16}
+stage2: {epochs: 2, batch_size: 16}
+stage3: {epochs: 2, batch_size: 16}
+supervised: {epochs: 2, batch_size: 16}

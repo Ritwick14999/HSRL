@@ -1,0 +1,9 @@
+panel,silhouette_cosine
+supervised: backbone f (final),0.15614482760429382
+hsrl: backbone f (final),0.09440633654594421
+hsrl_no_t2: backbone f (final),0.10993865132331848
+hsrl_no_stage1: backbone f (final),0.04397297650575638
+hsrl: projection z (after Stage I),0.38572511076927185
+hsrl: projection z (final),0.41778257489204407
+hsrl_no_t2: projection z (after Stage I),0.3631311058998108
+hsrl_no_t2: projection z (final),0.37636426091194153
